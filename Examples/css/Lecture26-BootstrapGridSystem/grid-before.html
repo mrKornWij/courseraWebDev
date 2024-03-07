@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- 
+            Bootstrap recommend to do!
+            It tells some versions of Internet Explorer that 
+            they should use the latest version or the latest 
+            compatibility version of its rendering engine.
+        -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!--Tell the browser to consider device size as media size, do not try to zoom in or zoom out-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Bootstrap Starter Page</title>
+
+        <!-- Actual Bootstrap CSS framework -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+        
+        <!-- where we put our custom styles
+            **NOTE** we declared our style after we declared the Bootstrap Css Styles because we will overwrite what Bootstrap give us NOT let Bootstrap overwrite our styles
+        -->
+        <link rel="stylesheet" href="css/styles.css"> 
+    </head>
+    <body>
+        <!-- Bootstrap columns -->
+        <div class="container-fluid"> <!--It should give us some padding(15px) on the side-->
+            <div class="row">
+                <!--
+                    - "col-md-4" will give the column as 4 of 12 grids of the browser (each column takes 1/3 of the browser)
+                        - From getbootstrap.com(Grid System), "md" stands for medium size(>=768px)
+                            which means:
+                                - if the browser/ device size is >= 768px it will show Col1, Col2, Col3 with scale 4-4-4
+                                - if the browser/device size is < 768, Col1 Col2 and Col3 will stack up on top of each other.
+
+                    - "col-md-6" will give the column as 6 of 12 grids of the browser (each column takes 1/2 of the browser)
+                        -From getbootstrap.com(Grid System), "sm" stands for small size(>=576px)
+                            which means:
+                                - if the browser/device size is >= 576px it will show Col1, Col2, Col3 with scale 6-6-6(Col3 will be on the new line)
+                                - if the browser/device size is < 576px, Col1 Col2 and Col3 will stack up on top of each other.
+                -->
+                <div class="col-md-4 col-sm-6">Col 1</div>
+                <div class="col-md-4 col-sm-6">Col 2</div>
+                <div class="col-md-4 col-sm-6">Col 3</div>
+            </div>
+
+            <div class="row">
+                <!--
+                    - "col-md-4" will give the column as 4 of 12 grids of the browser (each column takes 1/3 of the browser)
+                        - From getbootstrap.com(Grid System), "md" stands for medium size(>=768px)
+                            which means:
+                                - if the browser/ device size is >= 768px it will show Col1, Col2, Col3 with scale 4-4-4
+                                - if the browser/device size is < 768, Col1 Col2 and Col3 will stack up on top of each other.
+                                
+                    - "col-md-6" will give the column as 6 of 12 grids of the browser (each column takes 1/2 of the browser)
+                        -From getbootstrap.com(Grid System), "sm" stands for small size(>=576px)
+                            which means:
+                                - if the browser/device size is >= 576px it will show Col1, Col2, Col3 with scale 6-6-6(Col3 will be on the new line)
+                                - if the browser/device size is < 576px, Col1 Col2 and Col3 will stack up on top of each other.
+                -->
+                <div class="col-md-4 col-sm-6">Col 1</div>
+                <div class="col-md-4 col-sm-6">Col 2</div>
+                <div class="col-md-4 col-sm-6">Col 3</div>
+            </div>
+
+            <div class="row">
+                <!--
+                    - "col-xs-6" will give the column as 6 of 12 grids of the browser (each column takes 1/2 of the browser)
+                        -From getbootstrap.com(Grid System), "sm" stands for small size(<576px)
+                            which means:
+                                - if the browser/device size is < 576px it will show Col1, Col2, Col3 with scale 6-6-6(Col3 will be on the new line)
+                -->
+                <div class="col-xs-6">Col 1</div>
+                <div class="col-xs-6">Col 2</div>
+                <div class="col-xs-6">Col 3</div>
+            </div>
+            
+        </div>
+
+
+        <!--****** Declare some JS files or JS libraries ******-->
+        <!--
+            Bootstrap Javescript depends on jQuery
+            1. Reference jQuery first
+            2. After referenced jQuery, we reference Bootstrap JS
+            3. Last, we reference our own JS files which is likely to be using jQuery or the BootstrapJS file
+        -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- 
+            Bootstrap recommend to do!
+            It tells some versions of Internet Explorer that 
+            they should use the latest version or the latest 
+            compatibility version of its rendering engine.
+        -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!--Tell the browser to consider device size as media size, do not try to zoom in or zoom out-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Bootstrap Starter Page</title>
+        
+        <!-- Actual Bootstrap CSS framework -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+        
+        <!-- where we put our custom styles
+            **NOTE** we declared our style after we declared the Bootstrap Css Styles because we will overwrite what Bootstrap give us NOT let Bootstrap overwrite our styles
+        -->
+        <link rel="stylesheet" href="css/styles.css"> 
+    </head>
+    <body>
+        <!--****** Contents ******-->
+        <!-- Some styling of BootstapJS will be applied to the contents -->
+        <h1>Hello Coursera!</h1>
+
+
+
+        <!--****** Declare some JS files or JS libraries ******-->
+        <!--
+            Bootstrap Javescript depends on jQuery
+            1. Reference jQuery first
+            2. After referenced jQuery, we reference Bootstrap JS
+            3. Last, we reference our own JS files which is likely to be using jQuery or the BootstrapJS file
+        -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,11 @@
+/* External Stylesheet */
+
+/* 
+    Specify that the entire body(entire viewport):
+    1.its background color is gray
+    2.the font size is 130% 0f the default font size
+ */
+body { 
+    background-color: gray;
+    font-size: 130%;
+}

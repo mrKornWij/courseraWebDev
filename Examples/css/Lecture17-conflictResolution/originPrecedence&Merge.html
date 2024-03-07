@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cascade of CSS</title>
+        <link rel="stylesheet" href="external.css">
+        <style>
+            p {
+                color: maroon;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Origin Precedence Example</h1>
+
+        <!--This 1st <p>:
+            1. there is conflict because there is a text color declaration in a stylesheet.
+                So the browser will show text color in color 'maroon' because 'color: maroon;' is declared 
+                after 'color: white;' declaration in a stylesheet.
+            2. In a stylesheet also declare 'font-size: 130%;' and 'background-color: gray;'. 
+            These styles have no conflict, so they will be merged and show on the browser
+            3.so this paragraph will be shown the maroon text with gray background and 130% font size
+        -->
+        <p>The rule is simple: Last declaration wins.</p>
+
+        <!--this 2nd <p> has conflict with "color" declation
+            1.there is 'color: maroon;' from above and this 2nd <p> has Inline styling declaration 'color: black;'. 
+            2.'color: black;' comes after 'color: maroon;', so the text color of this 2nd <p> will be black.
+            3.'font-size: 130%;','background-color: gray;' from stylesheet have no conflict, so these style will be merged.
+            4. this paragraph will be shown the black text with gray background and 130% font size.***
+        -->
+        <p style="color: black;">
+            If there is no conflict, declarations merge into one rule.
+        </p>
+    </body>
+    
+</html>

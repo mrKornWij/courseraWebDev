@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Anatomy of a CSS Rule</title>
+        <style>
+            /* style of paragraph(p tag) */
+            p{
+                color: blue;
+                font-size: 20px;
+                width: 200px;
+            }
+            /*style of header(h1 tag)*/
+            h1{
+                color: green;
+                font-size: 36px;
+                text-align: center;
+            }
+            h2{
+                color: rgb(243, 156, 25);
+                font-size: 46px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Anatomy of a CSS Rule</h1>
+        <!--
+            h2 when it is shown on the browser, if we do not apply any style to it, 
+            its texts will be in bigger size than <p> tag texts and it is bold 
+            because these style comes from the browser itself(default style).
+            Every browsers have their own default styles which applies to HTML.
+        -->
+        <h2>Subheading 1</h2> 
+        <p>
+            CSS works by associating rules with HTML elements. These rules govern how
+            the content of specified elements should be displayed. A CSS rule contains 
+            2 parts: a selector and a declaration.
+        </p>
+        <h2>Subheading 2</h2>
+        <p>
+            Lorem insum dolor sit amet, consectetur adipisicing elit. est 
+            maxime aperiam blanditiis reprehenderit voluptatem quia quas nesciunt 
+            amet atque temporibus quod harum sequi voluptate consequatur tenetur 
+            oerferendis, cum ad! Eos.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <moment charset="utf-8">
+        <title>Pseudo Class Selectors</title>
+        <style>
+            /* Every 'li' elements (any level) that are inside 'header' element */
+            header li {
+                list-style: none;
+            }
+            /*
+                we're targeting 2 states:
+                1. a:link (a's being a link) --> link
+                2. a:visited (a's being a visited) --> after you click a particular link,
+                HTML allows a different style can be applied to that link than an unclicked link.
+            */
+            a:link, a:visited {
+                text-decoration: none;
+                background-color: green;
+                border: 1px solid blue;
+                color: black;
+                display: block;
+                width: 200px;
+                text-align: center;
+                margin-bottom: 1px;
+            }
+            /*
+                - active is the state when the user actually clicks on the element but hasn't yet released his click.
+                we don't want to differentiate hover and active so we group them together
+            */
+            a:hover, a:active {
+                background-color: red;
+                color: purple;
+            }
+            /* Target the third 'li' element inside of 'header' element to be bigger*/
+            header li:nth-child(3) {
+                font-size: 24px;
+            }
+            /*Targeting the odd ordered div in section. make its background color to gray*/
+            section div:nth-child(odd) {
+                background-color: gray;
+            }
+            /*Targeting the 4th div inside of section. We give hover behavior to it, change
+            background color to green, and change its cursur to pointer*/
+            section div:nth-child(4):hover {
+                background-color: green;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pseudo Class Selectors</h1>
+        <header>
+            <ul>
+                <li> <a href="/">Home</a> </li>
+                <li> <a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a> </li>
+                <li> <a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a> </li>
+            </ul>
+        </header>
+        <section>
+            <div>DIV 1</div>
+            <div>DIV 2</div>
+            <div>DIV 3</div>
+            <div>DIV 4</div>
+            <div>DIV 5</div>
+            <div>DIV 6</div>
+            <div>DIV 7</div>
+            <div>DIV 8</div>
+            <div>DIV 9</div>
+            <div>DIV 10</div>
+        </section>
+    </body>
+</html>

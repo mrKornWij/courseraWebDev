@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Box Model</title>
+        <style>
+            /* '*' selector will select every elements and apply these CSS properties */
+            /* Note: Use '*' selector, if you want reset the browser defaults */
+            * {
+                /*from CSS3, we use 'box-sizing: border-box;' to tell the browser that we need the width of the box to 
+                be 300px. Not only resizing the content but also resize the box*/
+                /*All framework use this 'box-sizing' declaration*/
+                box-sizing: border-box;
+
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: gray;
+            }
+            #box {
+                background-color: blue;
+                padding: 10px; /*Set padding 10px top, 10px right, 10px bottom, 10px left*/
+                border: 5px solid black; /*Set border: 5px thick, solid, black color*/
+                /* margin: 40px; Set margin at 40px which means I want 40 px all around */
+                width: 300px; /*Set the width of the box. the fact is this is set to the size of content not the box*/
+                height: 50px;
+                margin-top: 50px;
+                /*If content is too long, it will makes content size more than the box size
+                To handle this we specify 'overflow':
+                    - 'overflow: auto;' means it will add scroll bar to the box so user can scroll down to read all text.
+                    - 'overflow: hidden;' means the texts of content which are outside the box will be unvisible*/
+                overflow: auto;
+                /*from CSS3, we use 'box-sizing: border-box;' to tell the browser that we need the width of the box to 
+                be 300px. Not only resizing the content but also resize the box*/
+                /*All framework use this 'box-sizing' declaration*/
+                /* box-sizing: border-box; */
+            }
+            #content {
+                background-color: #90EE90; /* green */
+            }
+            h1 {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Box Model</h1>
+        <div id="box">
+            <div id="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. asdfkjslfja lsflasjdl fjskfal sjfajsldfjaslkjf
+                asjkfklajf kajsldkfjsldkjfa kljlfjaksljfkajklfj aklsjdlfkjasfjalsj fklajs;flja;lsjfas fasfasfa sfasfasdfasf
+                falskf jalksfjka lsj flajs;lfjalksjdkfl;a j;skfja;sjfk lasl;fj alsk jfd;s lj fl;ksjfkljs;as jkfklajfkajsldkfjsl
+                aklfl;aksjd flkajslfjsdl;fjaljdsfkljsri uweorpqow uerioqwu rpjdksn vsnvk sjdfkjasdlfj 
+            </div>
+        </div>
+    </body>
+</html>

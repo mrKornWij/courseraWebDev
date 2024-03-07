@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Setting Font Size</title>
+        <style>
+            body {
+                font-size: 120%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>Regular text</div>
+        <!-- 2em is not overwriting, so the text (120% * defaultSize) will be multiply by 2-->
+        <!-- 2em = 2 * regular-font-size (2 * (120% * default-fontsize)) -->
+        <div style="font-size: 2em;">2em text
+            <!-- this text will have font-size = (2 * ( 2 * (120% * default-fontsize))) because it's a child element of 2nd <div> --> 
+            <div style="font-size: 2em">4em text
+                <!-- this text will have font-size = 0.5 * (2 * ( 2 * (120% * default-fontsize))) because it's a child element of 2nd <div> -->
+                <div style="font-size: .5em">2em again!</div>
+            </div>
+        </div>
+    </body>
+</html>

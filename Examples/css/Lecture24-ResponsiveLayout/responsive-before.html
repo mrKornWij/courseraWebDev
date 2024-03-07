@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+            By default, on the mobile browsers they will try to zoom out to show full size of website.
+            so we can tell the mobile browser, Don't zoom out using <meta name="viewport" content="width=device-width,initial-scale=1">
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Responsive Layout</title>
+        <style>
+            /****** base styles ******/
+            * {
+                box-sizing: border-box;
+            }
+
+            p {
+                border: 1px solid black;
+                background-color: #A52A2A;
+                width: 90%;
+                height: 150px;
+                /* To center paragraph tag inside a block level element*/
+                margin-right: auto;
+                margin-left: auto;
+                /****************************************/
+                font-family: Helvectica;
+                color: white;
+            }
+
+            /****** Simple Responsive Framework. ******/
+            .row {
+                /* wherever you put the row at, it will try to take 100% of that space */
+                width: 100%;
+            }
+
+            /****** Large Devices Only ******/
+            @media (min-width: 1200px) {
+                .col-lg-1, /*col=column, lg=large*/
+                .col-lg-2,
+                .col-lg-3,
+                .col-lg-4,
+                .col-lg-5,
+                .col-lg-6,
+                .col-lg-7,
+                .col-lg-8,
+                .col-lg-9,
+                .col-lg-10,
+                .col-lg-11,
+                .col-lg-12 {
+                    float: left; /*Every single columns(based layout) are floated to the left*/
+                    border: 1px solid green; /*Each column has a 1px green border*/
+                }
+
+                .col-lg-1 {
+                    /* If it's 12 columns layout, the width of single column:
+                            100%(browserLayout) / 12(columns) = 8.33% */
+                    width: 8.33%;
+                }
+                .col-lg-2 {
+                    /* The width of 2 columns: 
+                        (100% / 12) * 2 = 16.66% */
+                    width: 16.66%;
+                }
+                .col-lg-3 {
+                    /* The width of 3 columns: 
+                        (100% / 12) * 3 = 25% */
+                    width: 25%;
+                }
+                .col-lg-4 {
+                    /* The width of 4 columns:
+                        (100% / 12) * 4 = 33%
+                    */
+                    width: 33%;
+                }
+                .col-lg-5 {
+                    /* The width of 5 columns:
+                        (100% / 12) * 5 = 41.66%
+                    */
+                    width: 41.66%
+                }
+                .col-lg-6 {
+                    /* The width of 6 columns:
+                        (100% / 12) * 6 = 50%
+                    */
+                    width: 50%;
+                }
+                .col-lg-7 {
+                    /* The width of 7 columns:
+                        (100% / 12) * 7 = 58.33%
+                    */
+                    width: 58.33%;
+                }
+                .col-lg-8 {
+                    /* The width of 8 columns:
+                        (100% / 12) * 8 = 66.66%
+                    */
+                    width: 66.66%;
+                }
+                .col-lg-9 {
+                    /* The width of 9 columns:
+                        (100% / 12) * 9 = 74.99%
+                    */
+                    width: 74.99%;
+                }
+                .col-lg-10 {
+                    /* The width of 10 columns:
+                        (100% / 12) * 10 = 83.33%
+                    */
+                    width: 83.33%;
+                }
+                .col-lg-11 {
+                    /* The width of 11 columns:
+                        (100% / 12) * 11 = 91.66%
+                    */
+                    width: 91.66%;
+                }
+                .col-lg-12 {
+                    /* The width of 12 columns:
+                        (100% / 12) * 12 = 100%
+                    */
+                    width: 100%;
+                }
+            }
+            
+            /****** Medium Devices Only ,Don't overlap the range of media size ******/
+            @media (min-width: 950px) and (max-width: 1199px) {
+                .col-md-1, /*col=column, md=medium*/
+                .col-md-2,
+                .col-md-3,
+                .col-md-4,
+                .col-md-5,
+                .col-md-6,
+                .col-md-7,
+                .col-md-8,
+                .col-md-9,
+                .col-md-10,
+                .col-md-11,
+                .col-md-12 {
+                    float: left; /*Every single columns(based layout) are floated to the left*/
+                    border: 1px solid green; /*Each column has a 1px green border*/
+                }
+
+                .col-md-1 {
+                    /* If it's 12 columns layout, the width of single column:
+                            100%(browserLayout) / 12(columns) = 8.33% */
+                    width: 8.33%;
+                }
+                .col-md-2 {
+                    /* The width of 2 columns: 
+                        (100% / 12) * 2 = 16.66% */
+                    width: 16.66%;
+                }
+                .col-md-3 {
+                    /* The width of 3 columns: 
+                        (100% / 12) * 3 = 25% */
+                    width: 25%;
+                }
+                .col-md-4 {
+                    /* The width of 4 columns:
+                        (100% / 12) * 4 = 33%
+                    */
+                    width: 33%;
+                }
+                .col-md-5 {
+                    /* The width of 5 columns:
+                        (100% / 12) * 5 = 41.66%
+                    */
+                    width: 41.66%
+                }
+                .col-md-6 {
+                    /* The width of 6 columns:
+                        (100% / 12) * 6 = 50%
+                    */
+                    width: 50%;
+                }
+                .col-md-7 {
+                    /* The width of 7 columns:
+                        (100% / 12) * 7 = 58.33%
+                    */
+                    width: 58.33%;
+                }
+                .col-md-8 {
+                    /* The width of 8 columns:
+                        (100% / 12) * 8 = 66.66%
+                    */
+                    width: 66.66%;
+                }
+                .col-md-9 {
+                    /* The width of 9 columns:
+                        (100% / 12) * 9 = 74.99%
+                    */
+                    width: 74.99%;
+                }
+                .col-md-10 {
+                    /* The width of 10 columns:
+                        (100% / 12) * 10 = 83.33%
+                    */
+                    width: 83.33%;
+                }
+                .col-md-11 {
+                    /* The width of 11 columns:
+                        (100% / 12) * 11 = 91.66%
+                    */
+                    width: 91.66%;
+                }
+                .col-md-12 {
+                    /* The width of 12 columns:
+                        (100% / 12) * 12 = 100%
+                    */
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Responsive Layout</h1>
+
+        <div class="row">
+            <!--
+                Tell the browser that 
+                - when it is a large device, I want only the classes with 'lg' to apply
+                - when it is a medium device, I want only the classes with 'md' to apply
+            -->
+            <div class="col-lg-3 col-md-6">
+                <p>Item 1</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <p>Item 2 Wow this is cool</p> 
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <p>Item 3</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <p>Item 4</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <p>Item 5 This is cool</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <p>Item 6</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <p>Item 7</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <p>Item 8</p>
+            </div>
+        </div>
+    </body>
+</html>

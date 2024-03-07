@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Inheritance In CSS</title>
+        <style>
+            /*Inheritance case: Every elements under <body> will be applied the same declarations.*/
+            body {
+                color: red;
+                text-align: center;
+                font-family: Helvetica;
+            }
+
+            /*This will has conflict so it will be Origin Precedence case, This style is applied to 
+            <p> after <body> declaration. this will turn every <p> into blue*/
+            p {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cascade of CSS Example</h1>
+        <h2>Subheading 1</h2>
+        <p>
+            Inheritence allows us to write more global styles on parent elements and then 
+            "fine-tune" the styles for some of the child elements as needed. Such approach 
+            makes writing CSS very efficient.
+        </p>
+
+        <!-- We apply style Inline to this second <h2> so it will be in the case of Origin Precedence.
+            this cause a conflict in "color". This style is applied after other declaration, so the 
+            browser will show this <h2> as green-->
+        <h2 style="color: green;">Subheading 2</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ad excepturi 
+            eveniet odio, fuga nam quidem reprehenderit placeat commodi? In laudamtium cum 
+            nam quod vitae at eligendi consequatur sequi comque.
+        </p>
+
+    </body>
+</html>

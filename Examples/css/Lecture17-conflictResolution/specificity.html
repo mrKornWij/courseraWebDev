@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Specificity in CSS</title>
+        <style>
+            /*this declaration score 12*/
+            header.navigation p {
+                color: blue;
+            }
+            /*this rule get 11*/
+            p.blurb {
+                color: red;
+            }
+            P {
+            /* '!important' means, it doesn't matter what specifity is, overwrite it with
+                this specification. */
+                color: green !important; 
+            }
+        </style>
+    </head>
+    <body>
+        <header class="navigation">
+            <p class="blurb">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero soluta enim aut! 
+                Nihil nam obcaecati, fungiat sint sit libero voluptate cos indidunt odio neque 
+                cum, dignissimos aperiam, magnam nisi debitis.
+            </p>
+        </header>
+    </body>
+</html>
